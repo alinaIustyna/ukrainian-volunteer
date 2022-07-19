@@ -8,15 +8,15 @@ import { Sun } from "./sun";
 import { Vector2D } from "../utils/vector2d";
 import { canvasHeight } from "../const";
 
-const getCurrentMinute = () => frameCount % (24 * 60);
-const getCurrentHour = () => getCurrentMinute() / 60;
+const getCurrentMinute = () => frameCount % (24 * 600);
+const getCurrentHour = () => getCurrentMinute() / 600;
 
 export class Sky {
   color: Color;
   clouds: Cloud[] = [];
   sun: Sun;
   moon: Moon;
-  stars: Star[];
+  stars: Star[] = [];
 
   update(currentWeather: Weather, Speed: Vector2D) {
     const difference = Math.abs(currentWeather.cloudiness - this.clouds.length);
@@ -81,8 +81,8 @@ export class Sky {
   drawSkyBg(start: Color, end: Color, startHour: number, endHour: number) {
     const proportion = map(
       getCurrentMinute(),
-      startHour * 60,
-      endHour * 60,
+      startHour * 600,
+      endHour * 600,
       0,
       1
     );

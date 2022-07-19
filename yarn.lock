@@ -2735,6 +2735,11 @@
   "resolved" "https://registry.npmjs.org/functions-have-names/-/functions-have-names-1.2.3.tgz"
   "version" "1.2.3"
 
+"game@^1.0.3":
+  "integrity" "sha512-bcUubwZ21jgnVdCz9QY9ddIIhi1OwzZBa8jiUhEHCAvS8rsGR6W6BSSXFCK5Fzk9tDznQtbUgbm4ZtERBk8zlw=="
+  "resolved" "https://registry.npmjs.org/game/-/game-1.0.3.tgz"
+  "version" "1.0.3"
+
 "gensync@^1.0.0-beta.2":
   "integrity" "sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg=="
   "resolved" "https://registry.npmjs.org/gensync/-/gensync-1.0.0-beta.2.tgz"

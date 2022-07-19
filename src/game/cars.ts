@@ -1,17 +1,25 @@
-import { canvasWidth } from "const";
+import { canvasHeight, canvasWidth } from "const";
 import "p5";
 import { Vector2D } from "utils/vector2d";
 
 export class Cars {
-  offset: number = 0;
+  offset: number = 1;
+  private readonly initialyY: number;
+  private readonly initialyX: number;
 
-  constructor(public x, public y) { }
+  constructor(public x, public y, public width, public height) {
+    this.initialyY = this.y;
+  }
 
-  update(currentWether, Speed: Vector2D) {
-    this.offset -= Speed.x;
-    if (keyIsDown(UP_ARROW)) {
-      this.y -= -5 * Speed.y;
-    } 
+  update(currentWether, speed: Vector2D) {
+    this.y += 4 * speed.y;
+    this.offset -= 2 * speed.x;
+    if (this.y < this.initialyY) {
+      this.y = this.initialyY;
+    }
+    if (this.x > this.initialyX) {
+      this.x += this.initialyX;
+    }
   }
 
   drawCar(x: number, y: number) {
